@@ -1,0 +1,55 @@
+# configs/pahaw_config.yaml: configurazione di DiffInk per PaHaW (VAE e DiT).
+#
+# I valori segnati [PRETRAINED] fissano la shape dei tensori del checkpoint ufficiale
+# e non vanno cambiati: i layer interessati resterebbero inizializzati a caso (il
+# caricamento dice quali).
+
+# ---------------------------------------------------------------- dati
+in_channels: 6          # dx, dy, pressure, azimuth, altitude, pen   (originale: 5 -> il primo conv è nuovo)
+num_classes: 2          # 0 = sano, 1 = Parkinson
+num_tasks: 8            # task PaHaW 1..8 -> 0..7
+
+# ---------------------------------------------------------------- VAE
+latent_dim: 384                 # [PRETRAINED] dimensione di un frame latente
+hidden_dims: [128, 256, 384]    # [PRETRAINED] larghezze dell'encoder a T/2, T/4, T/8
+decoder_dims: [384, 256, 128]   # [PRETRAINED] larghezze del decoder a T/8, T/4, T/2
+trans_hidden_dim: 256           # [PRETRAINED] Transformer alla fine del decoder
+trans_num_heads: 4              # [PRETRAINED]
+trans_num_layers: 3             # [PRETRAINED]
+num_mixture: 20                 # gaussiane della mixture per (dx, dy) (il layer d'uscita è comunque nuovo)
+
+# Pesi della loss del VAE. Tolti rispetto all'originale: ctc_weight, style_weight.
+gmm_weight: 1.0         # likelihood della mixture (dx, dy)
+aux_weight: 1.0         # likelihood di pressure / azimuth / altitude   (termine nuovo)
+pen_weight: 1.0         # stato della penna
+kl_weight: 1.0e-6       # tiene i latenti vicini a 0; molto piccolo, come nell'originale
+
+# ---------------------------------------------------------------- DiT
+dim: 896                # [PRETRAINED] larghezza del Transformer
+depth: 16               # [PRETRAINED] numero di blocchi
+heads: 14               # [PRETRAINED] teste di attention
+dim_head: 64            # [PRETRAINED]
+ff_mult: 4              # [PRETRAINED]
+dropout: 0.1            # come nell'originale
+long_skip_connection: False     # [PRETRAINED]
+time_embedding: legacy  # [PRETRAINED] "legacy" = identico al codice originale.
+                        #              "fixed" solo per un modello addestrato da zero.
+
+# ---------------------------------------------------------------- pesi ufficiali
+# File scaricati dalla release ufficiale di DiffInk.
+pretrained_vae_path: ./pretrained/vae_epoch_100.pt
+pretrained_dit_path: ./pretrained/dit_epoch_1.pt
+
+# ---------------------------------------------------------------- fine-tuning
+dit_strategy: lora      # minimal | lora | full   (vedi finetune.py)
+lora_rank: 8            # rango degli adattatori
+lr_new: 1.0e-4          # learning rate dei parametri NUOVI (layer nuovi, embedding, adattatori)
+lr_pretrained: 1.0e-5   # learning rate dei parametri pretrained sbloccati
+weight_decay: 0.01
+
+# ---------------------------------------------------------------- diffusione
+noise_steps: 1000       # [PRETRAINED] come nell'originale
+schedule_type: cosine   # [PRETRAINED] come nell'originale
+p_uncond: 0.15          # quanto spesso la classe viene nascosta nel training del DiT (per la guidance)
+sampling_timesteps: 50  # passi DDIM per generare un campione
+cfg_scale: 1.0          # forza della guidance in generazione; 1.0 = modello condizionato senza amplificazione

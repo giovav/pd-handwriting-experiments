@@ -1,0 +1,26 @@
+{
+  "val_all": {
+    "noise_xy": 0.20713,
+    "noise_aux": 0.10996,
+    "pen": 0.01493
+  },
+  "val_healthy": {
+    "noise_xy": 0.24583,
+    "noise_aux": 0.13215,
+    "pen": 0.02053
+  },
+  "val_pd": {
+    "noise_xy": 0.18111,
+    "noise_aux": 0.10072,
+    "pen": 0.01268
+  },
+  "preview": {
+    "recordings": 16,
+    "all_finite": true,
+    "max_abs_offset_normalized": 1.4,
+    "pen_down_share": 1.0
+  },
+  "fold": 3,
+  "best_epoch": 294,
+  "best_val_loss": 0.34002
+}

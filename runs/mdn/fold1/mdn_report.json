@@ -1,0 +1,26 @@
+{
+  "val_all": {
+    "gmm": -0.63104,
+    "aux": 1.3702,
+    "pen": 0.37172
+  },
+  "val_healthy": {
+    "gmm": -0.59127,
+    "aux": 1.10712,
+    "pen": 0.31236
+  },
+  "val_pd": {
+    "gmm": -0.65978,
+    "aux": 1.56029,
+    "pen": 0.41461
+  },
+  "preview": {
+    "recordings": 16,
+    "all_finite": true,
+    "max_abs_offset_normalized": 87.4,
+    "pen_down_share": 0.775
+  },
+  "fold": 1,
+  "best_epoch": 3,
+  "best_val_loss": 1.15307
+}

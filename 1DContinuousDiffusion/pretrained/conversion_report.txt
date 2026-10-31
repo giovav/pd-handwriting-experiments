@@ -1,0 +1,26 @@
+==============================================================================
+Luhman & Luhman (2020): official weights -> PyTorch -> PaHaW
+source file : 1DContinuousDiffusion/weights/model_weights.h5
+sha256      : c6fab8fafa9a92bf71f74bcbb92b5d6151a85a1ab049086767c7408e6651d01a
+torch 2.14.1, numpy 2.5.3
+==============================================================================
+
+STAGE 1  Keras -> PyTorch
+   323 tensors, 10,028,451 values converted (the 10 frozen identity LayerNorm tensors of the file are not needed)
+   Check 1a: PyTorch copy vs stored outputs of the original TensorFlow code
+      noise prediction                              2.16e-05
+      pen-lift probability                          1.46e-05
+      (output size, for scale)                      3.84e+00
+      -> passed
+   saved 1DContinuousDiffusion/pretrained/luhman_official.pt
+
+STAGE 2  official network -> PaHaW network
+   loaded 218 tensors; sign-flipped ['pen_dense.weight', 'pen_dense.bias']
+   new (zero): ['class_embed.weight', 'input_new.weight', 'output_new.bias', 'output_new.weight', 'task_embed.weight']; discarded: 105 tensors of text, style and cross-attention
+   PaHaW network: 6,002,342 values
+   Check 2: PaHaW network vs original network without its text cross-attention
+      noise dx, dy                                  0.00e+00
+      pen probability (ours vs 1 - original)        5.96e-08
+      noise of the 3 new channels (must be 0)       0.00e+00
+      -> passed
+   saved 1DContinuousDiffusion/pretrained/luhman_pahaw_init.pt   <- the starting point for training on PaHaW

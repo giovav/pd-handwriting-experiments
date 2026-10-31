@@ -1,0 +1,36 @@
+# configs/pahaw_config.yaml: l'MDN autoregressivo (Graves 2013) per PaHaW.
+#
+# I valori segnati [PRETRAINED] fissano la shape dei tensori del checkpoint ufficiale
+# (checkpoints/Epoch_56/model.pt); se se ne cambia uno il caricamento si ferma con
+# una spiegazione.
+
+# ---------------------------------------------------------------- dati
+in_channels: 6          # dx, dy, pressure, azimuth, altitude, pen   (originale: dx, dy, end-of-stroke)
+num_classes: 2          # 0 = sano, 1 = Parkinson
+num_tasks: 8            # task PaHaW 1..8 -> 0..7
+
+# ---------------------------------------------------------------- rete
+hidden_size: 400        # [PRETRAINED] celle per layer LSTM (3 layer)
+cond_dim: 80            # [PRETRAINED] dimensione del vecchio vettore della finestra (caratteri + 1);
+                        #              la condizione di classe e task usa le stesse righe di ingresso
+num_mixture: 20         # [PRETRAINED] componenti della mixture per (dx, dy)
+
+# Pesi della loss (gli stessi tre termini del decoder del VAE di DiffInk).
+gmm_weight: 1.0         # likelihood della mixture (dx, dy)
+aux_weight: 1.0         # likelihood di pressure / azimuth / altitude   (termine nuovo)
+pen_weight: 1.0         # stato della penna                             (al posto dell'end-of-stroke)
+
+# ---------------------------------------------------------------- pesi ufficiali
+# Relativo a questa cartella (il repository originale contiene il file). Con
+# --pretrained_dir il file viene cercato in quella cartella (vedi train_common.pretrained_file).
+pretrained_path: ./checkpoints/Epoch_56/model.pt
+
+# ---------------------------------------------------------------- fine-tuning
+# Si addestrano tutti i pesi; quelli nuovi (inizializzati a zero) imparano più in fretta
+# di quelli pretrained. Valori di partenza, non ottimizzati.
+lr_new: 1.0e-3          # embedding della condizione, ingressi di pressure/azimuth/altitude/pen, uscite pen e aux
+lr_pretrained: 1.0e-4   # le tre LSTM e la mixture (dx, dy)
+weight_decay: 0.01
+
+# ---------------------------------------------------------------- generazione
+sampling_bias: 0.0      # bias b di Graves (2013, sez. 5.4); 0 = si campiona la distribuzione appresa

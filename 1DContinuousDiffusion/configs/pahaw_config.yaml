@@ -1,0 +1,32 @@
+# configs/pahaw_config.yaml: diffusione 1-D di Luhman e Luhman (2020) per PaHaW.
+#
+# I valori segnati [PRETRAINED] fissano la shape dei tensori dei pesi ufficiali; se se
+# ne cambia uno il caricamento si ferma con una spiegazione.
+
+# ---------------------------------------------------------------- dati
+num_classes: 2          # 0 = sano, 1 = Parkinson
+num_tasks: 8            # task PaHaW 1..8 -> 0..7
+
+# ---------------------------------------------------------------- rete
+c1: 128                 # [PRETRAINED] canali a risoluzione piena
+c2: 192                 # [PRETRAINED] canali a T/2
+c3: 256                 # [PRETRAINED] canali a T/4 (e 2 * c2 = 384 a T/8)
+num_att_layers: 2       # [PRETRAINED] blocchi di attention a T/8
+
+# ---------------------------------------------------------------- pesi ufficiali
+# I due file li scrive convert_official_weights.py a partire da weights/model_weights.h5
+# del repository ufficiale (in locale, una volta). Percorsi relativi a questa cartella;
+# con --pretrained_dir il file con lo stesso nome viene cercato in quella cartella.
+official_weights_path: ./pretrained/luhman_official.pt   # stadio 1: la rete ufficiale in PyTorch
+pretrained_path: ./pretrained/luhman_pahaw_init.pt       # stadio 2: adattata a PaHaW <- usata nel training
+
+# ---------------------------------------------------------------- loss
+noise_xy_weight: 1.0    # rumore previsto per dx, dy (la loss dell'originale)
+noise_aux_weight: 1.0   # rumore previsto per pressure, azimuth, altitude (nuovo)
+pen_weight: 1.0         # stato della penna, pesato con alpha_bar come nell'originale
+
+# ---------------------------------------------------------------- fine-tuning
+# Si addestrano tutti i pesi. Valori di partenza, non ottimizzati.
+lr_new: 1.0e-4          # embedding di classe e task, input_new, output_new (partono da zero)
+lr_pretrained: 1.0e-5   # tutto ciò che viene dai pesi ufficiali
+weight_decay: 0.01      # solo sulle MATRICI pretrained (non sui bias né sui parametri nuovi)

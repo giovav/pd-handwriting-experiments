@@ -1,0 +1,15 @@
+{
+  "reconstruction_rmse_normalized": {
+    "dx": 0.0681,
+    "dy": 0.2308,
+    "pressure": 0.1009,
+    "azimuth": 0.1167,
+    "altitude": 0.1388
+  },
+  "pen_state_accuracy": 0.9978,
+  "latent_mean": -0.053,
+  "latent_std": 1.3871,
+  "fold": 2,
+  "best_epoch": 189,
+  "best_val_loss": -6.87495
+}

@@ -1,0 +1,1309 @@
+{
+ "source": "tcl9876/Diffusion-Handwriting-Generation weights/model_weights.h5",
+ "unused_identity_layernorm_tensors": [
+  "decoder_layer/score_network/decoder_layer/layer_normalization/beta:0",
+  "decoder_layer/score_network/decoder_layer/layer_normalization/gamma:0",
+  "decoder_layer_1/score_network/decoder_layer_1/layer_normalization_1/beta:0",
+  "decoder_layer_1/score_network/decoder_layer_1/layer_normalization_1/gamma:0",
+  "decoder_layer_2/score_network/decoder_layer_2/layer_normalization_3/beta:0",
+  "decoder_layer_2/score_network/decoder_layer_2/layer_normalization_3/gamma:0",
+  "decoder_layer_3/score_network/decoder_layer_3/layer_normalization_4/beta:0",
+  "decoder_layer_3/score_network/decoder_layer_3/layer_normalization_4/gamma:0",
+  "text__style__encoder/score_network/text__style__encoder/layer_normalization_2/beta:0",
+  "text__style__encoder/score_network/text__style__encoder/layer_normalization_2/gamma:0"
+ ],
+ "parameters": {
+  "input_dense.weight": {
+   "h5": "dense/score_network/dense/kernel:0",
+   "layout": "dense"
+  },
+  "input_dense.bias": {
+   "h5": "dense/score_network/dense/bias:0",
+   "layout": "vector"
+  },
+  "sigma_ffn.dense1.weight": {
+   "h5": "sequential/dense_1/kernel:0",
+   "layout": "dense"
+  },
+  "sigma_ffn.dense1.bias": {
+   "h5": "sequential/dense_1/bias:0",
+   "layout": "vector"
+  },
+  "sigma_ffn.dense2.weight": {
+   "h5": "sequential/dense_2/kernel:0",
+   "layout": "dense"
+  },
+  "sigma_ffn.dense2.bias": {
+   "h5": "sequential/dense_2/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer/dense_3/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer/dense_3/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer/dense_4/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer/dense_4/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_1/dense_5/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_1/dense_5/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_1/dense_6/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_1/dense_6/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_2/dense_7/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_2/dense_7/bias:0",
+   "layout": "vector"
+  },
+  "enc1.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_2/dense_8/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/affine_transform_layer_2/dense_8/bias:0",
+   "layout": "vector"
+  },
+  "enc1.conv_skip.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d/kernel:0",
+   "layout": "conv"
+  },
+  "enc1.conv_skip.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d/bias:0",
+   "layout": "vector"
+  },
+  "enc1.conv1.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d_1/kernel:0",
+   "layout": "conv"
+  },
+  "enc1.conv1.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d_1/bias:0",
+   "layout": "vector"
+  },
+  "enc1.conv2.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d_2/kernel:0",
+   "layout": "conv"
+  },
+  "enc1.conv2.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/conv1d_2/bias:0",
+   "layout": "vector"
+  },
+  "enc1.fc.weight": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/dense_9/kernel:0",
+   "layout": "dense"
+  },
+  "enc1.fc.bias": {
+   "h5": "conv_sub_layer/score_network/conv_sub_layer/dense_9/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_3/dense_10/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_3/dense_10/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_3/dense_11/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_3/dense_11/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_4/dense_12/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_4/dense_12/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_4/dense_13/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_4/dense_13/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_5/dense_14/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_5/dense_14/bias:0",
+   "layout": "vector"
+  },
+  "enc2.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_5/dense_15/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/affine_transform_layer_5/dense_15/bias:0",
+   "layout": "vector"
+  },
+  "enc2.conv_skip.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_3/kernel:0",
+   "layout": "conv"
+  },
+  "enc2.conv_skip.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_3/bias:0",
+   "layout": "vector"
+  },
+  "enc2.conv1.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_4/kernel:0",
+   "layout": "conv"
+  },
+  "enc2.conv1.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_4/bias:0",
+   "layout": "vector"
+  },
+  "enc2.conv2.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_5/kernel:0",
+   "layout": "conv"
+  },
+  "enc2.conv2.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/conv1d_5/bias:0",
+   "layout": "vector"
+  },
+  "enc2.fc.weight": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/dense_16/kernel:0",
+   "layout": "dense"
+  },
+  "enc2.fc.bias": {
+   "h5": "conv_sub_layer_1/score_network/conv_sub_layer_1/dense_16/bias:0",
+   "layout": "vector"
+  },
+  "enc3.text_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/dense_17/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.text_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/dense_17/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha.wq.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_18/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha.wq.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_18/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha.wk.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_19/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha.wk.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_19/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha.wv.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_20/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha.wv.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_20/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha.dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_21/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha.dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention/dense_21/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine0.gamma_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_6/dense_28/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine0.gamma_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_6/dense_28/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine0.beta_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_6/dense_29/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine0.beta_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_6/dense_29/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine1.gamma_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_7/dense_30/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine1.gamma_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_7/dense_30/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine1.beta_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_7/dense_31/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine1.beta_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_7/dense_31/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha2.wq.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_22/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha2.wq.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_22/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha2.wk.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_23/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha2.wk.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_23/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha2.wv.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_24/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha2.wv.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_24/bias:0",
+   "layout": "vector"
+  },
+  "enc3.mha2.dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_25/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.mha2.dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/multi_head_attention_1/dense_25/bias:0",
+   "layout": "vector"
+  },
+  "enc3.ffn.dense1.weight": {
+   "h5": "decoder_layer/dense_26/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.ffn.dense1.bias": {
+   "h5": "decoder_layer/dense_26/bias:0",
+   "layout": "vector"
+  },
+  "enc3.ffn.dense2.weight": {
+   "h5": "decoder_layer/dense_27/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.ffn.dense2.bias": {
+   "h5": "decoder_layer/dense_27/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine2.gamma_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_8/dense_32/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine2.gamma_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_8/dense_32/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine2.beta_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_8/dense_33/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine2.beta_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_8/dense_33/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine3.gamma_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_9/dense_34/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine3.gamma_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_9/dense_34/bias:0",
+   "layout": "vector"
+  },
+  "enc3.affine3.beta_dense.weight": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_9/dense_35/kernel:0",
+   "layout": "dense"
+  },
+  "enc3.affine3.beta_dense.bias": {
+   "h5": "decoder_layer/score_network/decoder_layer/affine_transform_layer_9/dense_35/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_10/dense_36/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_10/dense_36/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_10/dense_37/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_10/dense_37/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_11/dense_38/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_11/dense_38/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_11/dense_39/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_11/dense_39/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_12/dense_40/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_12/dense_40/bias:0",
+   "layout": "vector"
+  },
+  "enc4.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_12/dense_41/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/affine_transform_layer_12/dense_41/bias:0",
+   "layout": "vector"
+  },
+  "enc4.conv_skip.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_6/kernel:0",
+   "layout": "conv"
+  },
+  "enc4.conv_skip.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_6/bias:0",
+   "layout": "vector"
+  },
+  "enc4.conv1.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_7/kernel:0",
+   "layout": "conv"
+  },
+  "enc4.conv1.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_7/bias:0",
+   "layout": "vector"
+  },
+  "enc4.conv2.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_8/kernel:0",
+   "layout": "conv"
+  },
+  "enc4.conv2.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/conv1d_8/bias:0",
+   "layout": "vector"
+  },
+  "enc4.fc.weight": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/dense_42/kernel:0",
+   "layout": "dense"
+  },
+  "enc4.fc.bias": {
+   "h5": "conv_sub_layer_2/score_network/conv_sub_layer_2/dense_42/bias:0",
+   "layout": "vector"
+  },
+  "enc5.text_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/dense_43/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.text_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/dense_43/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha.wq.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_44/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha.wq.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_44/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha.wk.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_45/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha.wk.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_45/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha.wv.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_46/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha.wv.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_46/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha.dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_47/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha.dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_2/dense_47/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine0.gamma_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_13/dense_54/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine0.gamma_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_13/dense_54/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine0.beta_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_13/dense_55/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine0.beta_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_13/dense_55/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine1.gamma_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_14/dense_56/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine1.gamma_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_14/dense_56/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine1.beta_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_14/dense_57/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine1.beta_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_14/dense_57/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha2.wq.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_48/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha2.wq.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_48/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha2.wk.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_49/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha2.wk.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_49/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha2.wv.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_50/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha2.wv.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_50/bias:0",
+   "layout": "vector"
+  },
+  "enc5.mha2.dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_51/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.mha2.dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/multi_head_attention_3/dense_51/bias:0",
+   "layout": "vector"
+  },
+  "enc5.ffn.dense1.weight": {
+   "h5": "decoder_layer_1/dense_52/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.ffn.dense1.bias": {
+   "h5": "decoder_layer_1/dense_52/bias:0",
+   "layout": "vector"
+  },
+  "enc5.ffn.dense2.weight": {
+   "h5": "decoder_layer_1/dense_53/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.ffn.dense2.bias": {
+   "h5": "decoder_layer_1/dense_53/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine2.gamma_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_15/dense_58/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine2.gamma_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_15/dense_58/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine2.beta_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_15/dense_59/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine2.beta_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_15/dense_59/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine3.gamma_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_16/dense_60/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine3.gamma_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_16/dense_60/bias:0",
+   "layout": "vector"
+  },
+  "enc5.affine3.beta_dense.weight": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_16/dense_61/kernel:0",
+   "layout": "dense"
+  },
+  "enc5.affine3.beta_dense.bias": {
+   "h5": "decoder_layer_1/score_network/decoder_layer_1/affine_transform_layer_16/dense_61/bias:0",
+   "layout": "vector"
+  },
+  "skip_conv1.weight": {
+   "h5": "conv1d_9/score_network/conv1d_9/kernel:0",
+   "layout": "conv"
+  },
+  "skip_conv1.bias": {
+   "h5": "conv1d_9/score_network/conv1d_9/bias:0",
+   "layout": "vector"
+  },
+  "skip_conv2.weight": {
+   "h5": "conv1d_10/score_network/conv1d_10/kernel:0",
+   "layout": "conv"
+  },
+  "skip_conv2.bias": {
+   "h5": "conv1d_10/score_network/conv1d_10/bias:0",
+   "layout": "vector"
+  },
+  "skip_conv3.weight": {
+   "h5": "conv1d_11/score_network/conv1d_11/kernel:0",
+   "layout": "conv"
+  },
+  "skip_conv3.bias": {
+   "h5": "conv1d_11/score_network/conv1d_11/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.emb.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/embedding/embeddings:0",
+   "layout": "embedding"
+  },
+  "text_style_encoder.style_ffn.dense1.weight": {
+   "h5": "text__style__encoder/dense_62/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.style_ffn.dense1.bias": {
+   "h5": "text__style__encoder/dense_62/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.style_ffn.dense2.weight": {
+   "h5": "text__style__encoder/dense_63/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.style_ffn.dense2.bias": {
+   "h5": "text__style__encoder/dense_63/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.mha.wq.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_64/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.mha.wq.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_64/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.mha.wk.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_65/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.mha.wk.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_65/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.mha.wv.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_66/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.mha.wv.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_66/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.mha.dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_67/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.mha.dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/multi_head_attention_4/dense_67/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine1.gamma_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_17/dense_68/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine1.gamma_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_17/dense_68/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine1.beta_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_17/dense_69/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine1.beta_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_17/dense_69/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine2.gamma_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_18/dense_70/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine2.gamma_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_18/dense_70/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine2.beta_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_18/dense_71/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine2.beta_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_18/dense_71/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine3.gamma_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_19/dense_72/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine3.gamma_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_19/dense_72/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine3.beta_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_19/dense_73/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine3.beta_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_19/dense_73/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine4.gamma_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_20/dense_74/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine4.gamma_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_20/dense_74/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.affine4.beta_dense.weight": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_20/dense_75/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.affine4.beta_dense.bias": {
+   "h5": "text__style__encoder/score_network/text__style__encoder/affine_transform_layer_20/dense_75/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.text_ffn.dense1.weight": {
+   "h5": "text__style__encoder/dense_76/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.text_ffn.dense1.bias": {
+   "h5": "text__style__encoder/dense_76/bias:0",
+   "layout": "vector"
+  },
+  "text_style_encoder.text_ffn.dense2.weight": {
+   "h5": "text__style__encoder/dense_77/kernel:0",
+   "layout": "dense"
+  },
+  "text_style_encoder.text_ffn.dense2.bias": {
+   "h5": "text__style__encoder/dense_77/bias:0",
+   "layout": "vector"
+  },
+  "att_dense.weight": {
+   "h5": "dense_78/score_network/dense_78/kernel:0",
+   "layout": "dense"
+  },
+  "att_dense.bias": {
+   "h5": "dense_78/score_network/dense_78/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.text_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/dense_79/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.text_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/dense_79/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha.wq.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_80/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha.wq.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_80/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha.wk.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_81/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha.wk.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_81/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha.wv.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_82/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha.wv.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_82/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha.dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_83/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha.dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_5/dense_83/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine0.gamma_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_21/dense_90/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine0.gamma_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_21/dense_90/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine0.beta_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_21/dense_91/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine0.beta_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_21/dense_91/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine1.gamma_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_22/dense_92/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine1.gamma_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_22/dense_92/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine1.beta_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_22/dense_93/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine1.beta_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_22/dense_93/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha2.wq.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_84/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha2.wq.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_84/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha2.wk.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_85/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha2.wk.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_85/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha2.wv.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_86/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha2.wv.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_86/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.mha2.dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_87/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.mha2.dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/multi_head_attention_6/dense_87/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.ffn.dense1.weight": {
+   "h5": "decoder_layer_2/dense_88/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.ffn.dense1.bias": {
+   "h5": "decoder_layer_2/dense_88/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.ffn.dense2.weight": {
+   "h5": "decoder_layer_2/dense_89/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.ffn.dense2.bias": {
+   "h5": "decoder_layer_2/dense_89/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine2.gamma_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_23/dense_94/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine2.gamma_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_23/dense_94/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine2.beta_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_23/dense_95/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine2.beta_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_23/dense_95/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine3.gamma_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_24/dense_96/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine3.gamma_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_24/dense_96/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.0.affine3.beta_dense.weight": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_24/dense_97/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.0.affine3.beta_dense.bias": {
+   "h5": "decoder_layer_2/score_network/decoder_layer_2/affine_transform_layer_24/dense_97/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.text_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/dense_98/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.text_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/dense_98/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha.wq.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_99/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha.wq.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_99/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha.wk.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_100/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha.wk.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_100/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha.wv.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_101/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha.wv.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_101/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha.dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_102/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha.dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_7/dense_102/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine0.gamma_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_25/dense_109/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine0.gamma_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_25/dense_109/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine0.beta_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_25/dense_110/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine0.beta_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_25/dense_110/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine1.gamma_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_26/dense_111/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine1.gamma_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_26/dense_111/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine1.beta_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_26/dense_112/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine1.beta_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_26/dense_112/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha2.wq.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_103/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha2.wq.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_103/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha2.wk.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_104/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha2.wk.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_104/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha2.wv.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_105/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha2.wv.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_105/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.mha2.dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_106/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.mha2.dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/multi_head_attention_8/dense_106/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.ffn.dense1.weight": {
+   "h5": "decoder_layer_3/dense_107/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.ffn.dense1.bias": {
+   "h5": "decoder_layer_3/dense_107/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.ffn.dense2.weight": {
+   "h5": "decoder_layer_3/dense_108/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.ffn.dense2.bias": {
+   "h5": "decoder_layer_3/dense_108/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine2.gamma_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_27/dense_113/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine2.gamma_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_27/dense_113/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine2.beta_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_27/dense_114/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine2.beta_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_27/dense_114/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine3.gamma_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_28/dense_115/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine3.gamma_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_28/dense_115/bias:0",
+   "layout": "vector"
+  },
+  "att_layers.1.affine3.beta_dense.weight": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_28/dense_116/kernel:0",
+   "layout": "dense"
+  },
+  "att_layers.1.affine3.beta_dense.bias": {
+   "h5": "decoder_layer_3/score_network/decoder_layer_3/affine_transform_layer_28/dense_116/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_29/dense_117/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_29/dense_117/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_29/dense_118/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_29/dense_118/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_30/dense_119/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_30/dense_119/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_30/dense_120/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_30/dense_120/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_31/dense_121/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_31/dense_121/bias:0",
+   "layout": "vector"
+  },
+  "dec3.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_31/dense_122/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/affine_transform_layer_31/dense_122/bias:0",
+   "layout": "vector"
+  },
+  "dec3.conv_skip.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_13/kernel:0",
+   "layout": "conv"
+  },
+  "dec3.conv_skip.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_13/bias:0",
+   "layout": "vector"
+  },
+  "dec3.conv1.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_14/kernel:0",
+   "layout": "conv"
+  },
+  "dec3.conv1.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_14/bias:0",
+   "layout": "vector"
+  },
+  "dec3.conv2.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_15/kernel:0",
+   "layout": "conv"
+  },
+  "dec3.conv2.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/conv1d_15/bias:0",
+   "layout": "vector"
+  },
+  "dec3.fc.weight": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/dense_123/kernel:0",
+   "layout": "dense"
+  },
+  "dec3.fc.bias": {
+   "h5": "conv_sub_layer_3/score_network/conv_sub_layer_3/dense_123/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_32/dense_124/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_32/dense_124/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_32/dense_125/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_32/dense_125/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_33/dense_126/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_33/dense_126/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_33/dense_127/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_33/dense_127/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_34/dense_128/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_34/dense_128/bias:0",
+   "layout": "vector"
+  },
+  "dec2.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_34/dense_129/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/affine_transform_layer_34/dense_129/bias:0",
+   "layout": "vector"
+  },
+  "dec2.conv_skip.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_16/kernel:0",
+   "layout": "conv"
+  },
+  "dec2.conv_skip.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_16/bias:0",
+   "layout": "vector"
+  },
+  "dec2.conv1.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_17/kernel:0",
+   "layout": "conv"
+  },
+  "dec2.conv1.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_17/bias:0",
+   "layout": "vector"
+  },
+  "dec2.conv2.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_18/kernel:0",
+   "layout": "conv"
+  },
+  "dec2.conv2.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/conv1d_18/bias:0",
+   "layout": "vector"
+  },
+  "dec2.fc.weight": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/dense_130/kernel:0",
+   "layout": "dense"
+  },
+  "dec2.fc.bias": {
+   "h5": "conv_sub_layer_4/score_network/conv_sub_layer_4/dense_130/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine1.gamma_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_35/dense_131/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine1.gamma_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_35/dense_131/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine1.beta_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_35/dense_132/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine1.beta_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_35/dense_132/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine2.gamma_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_36/dense_133/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine2.gamma_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_36/dense_133/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine2.beta_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_36/dense_134/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine2.beta_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_36/dense_134/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine3.gamma_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_37/dense_135/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine3.gamma_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_37/dense_135/bias:0",
+   "layout": "vector"
+  },
+  "dec1.affine3.beta_dense.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_37/dense_136/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.affine3.beta_dense.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/affine_transform_layer_37/dense_136/bias:0",
+   "layout": "vector"
+  },
+  "dec1.conv_skip.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_19/kernel:0",
+   "layout": "conv"
+  },
+  "dec1.conv_skip.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_19/bias:0",
+   "layout": "vector"
+  },
+  "dec1.conv1.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_20/kernel:0",
+   "layout": "conv"
+  },
+  "dec1.conv1.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_20/bias:0",
+   "layout": "vector"
+  },
+  "dec1.conv2.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_21/kernel:0",
+   "layout": "conv"
+  },
+  "dec1.conv2.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/conv1d_21/bias:0",
+   "layout": "vector"
+  },
+  "dec1.fc.weight": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/dense_137/kernel:0",
+   "layout": "dense"
+  },
+  "dec1.fc.bias": {
+   "h5": "conv_sub_layer_5/score_network/conv_sub_layer_5/dense_137/bias:0",
+   "layout": "vector"
+  },
+  "output_dense.weight": {
+   "h5": "dense_138/score_network/dense_138/kernel:0",
+   "layout": "dense"
+  },
+  "output_dense.bias": {
+   "h5": "dense_138/score_network/dense_138/bias:0",
+   "layout": "vector"
+  },
+  "pen_lifts_dense.weight": {
+   "h5": "dense_139/score_network/dense_139/kernel:0",
+   "layout": "dense"
+  },
+  "pen_lifts_dense.bias": {
+   "h5": "dense_139/score_network/dense_139/bias:0",
+   "layout": "vector"
+  }
+ }
+}

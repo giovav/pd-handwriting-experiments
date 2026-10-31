@@ -1,0 +1,14 @@
+venv/
+datasets/
+\.idea/
+*.pyc
+*.png
+*.jpg
+*.log
+*.zip
+*.h5
+charset.txt
+!/results/**/*.png
+my-app/public/
+my-app/package-lock.json
+.python-version
